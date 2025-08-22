@@ -1,0 +1,358 @@
+Atividade 1 - Média ------------------------------------------------
+
+public class Media {
+	
+	public static void main(String[] args)
+	{
+		Scanner scan = new Scanner(System.in); 	    
+	    
+	    System.out.println("Digite P1");
+	    int P1 = scan.nextInt();
+	    
+	    System.out.println("Digite E1");
+	    int E1 = scan.nextInt();
+	    
+	    System.out.println("Digite E2");
+	    int E2 = scan.nextInt();
+	    
+	    System.out.println("Digite X");
+	    int X = scan.nextInt();
+	    
+	    System.out.println("Digite SUB");
+	    int SUB = scan.nextInt();
+	    
+	    System.out.println("Digite API");
+	    int API = scan.nextInt();
+	    	 
+	   double media = ((P1*0.5+E1*0.2+E2*0.3+X+SUB*0.15)*0.5)+((P1*0.5+E1*0.2+E2*0.3+X+(SUB*0.15)-5.9)/(P1*0.5+E1*0.2+E2*0.3+X+(SUB*0.15)-5.9))*API*0.5;
+	   
+	   if(media > 10)
+	   {
+		   media = 10;
+	   }
+	   
+	   System.out.println("Sua média é igual a: " + media);
+	    
+	  }
+
+}
+
+
+
+Atividade 2 - Música ---------------------------------------------------------------------------------------
+
+class Porta {
+    private String cor;
+    private String estado;
+    private String destino;
+
+    public Porta(String cor, String estado, String destino) {
+        this.cor = cor;
+        this.estado = estado;
+        this.destino = destino;
+    }
+
+    public void abrir() {
+        this.estado = "aberta";
+        System.out.println("A porta foi aberta e leva para " + destino + ".");
+    }
+}
+
+class Olhos {
+    private String cor;
+    private boolean aberto;
+    private int nitidez;
+
+    public Olhos(String cor, boolean aberto, int nitidez) {
+        this.cor = cor;
+        this.aberto = aberto;
+        this.nitidez = nitidez;
+    }
+
+    public void ver() {
+        if (aberto) {
+            System.out.println("Os olhos de cor " + cor + " estão vendo com nitidez " + nitidez + ".");
+        } else {
+            System.out.println("Os olhos estão fechados e não podem ver.");
+        }
+    }
+}
+
+class Alma {
+    private String estado;
+    private int temperatura;
+    private int conexao;
+
+    public Alma(String estado, int temperatura, int conexao) {
+        this.estado = estado;
+        this.temperatura = temperatura;
+        this.conexao = conexao;
+    }
+
+    public void despertar() {
+        this.estado = "desperta";
+        System.out.println("A alma despertou! Temperatura: " + temperatura + "° e conexão: " + conexao + ".");
+    }
+}
+
+Atividade 3 - Obras de Artes -----------------------------------------------------------------------------------
+
+// Lampedusa 
+class BarcoDobradura {
+    private String cor;
+    private String material;
+    private boolean dobrado;
+
+    public BarcoDobradura(String cor, String material, boolean dobrado) {
+        this.cor = cor;
+        this.material = material;
+        this.dobrado = dobrado;
+    }
+
+    public void exibirFlutuando() {
+        if (dobrado) {
+            System.out.println("O barco de cor " + cor + " feito de " + material + " está flutuando.");
+        } else {
+            System.out.println("O barco ainda não foi dobrado.");
+        }
+    }
+}
+
+class Jornal {
+    private String veiculo;
+    private Date data;
+    private int paginas;
+
+    public Jornal(String veiculo, Date data, int paginas) {
+        this.veiculo = veiculo;
+        this.data = data;
+        this.paginas = paginas;
+    }
+
+    public void amassar() {
+        System.out.println("O jornal " + veiculo + " com " + paginas + " páginas foi amassado.");
+    }
+}
+
+class Canal {
+    private String localizacao;
+    private double profundidade;
+    private double largura;
+
+    public Canal(String localizacao, double profundidade, double largura) {
+        this.localizacao = localizacao;
+        this.profundidade = profundidade;
+        this.largura = largura;
+    }
+
+    public void receberObra(BarcoDobradura barco) {
+        System.out.println("O canal em " + localizacao + " recebeu a obra.");
+        barco.exibirFlutuando();
+    }
+}
+
+// John Lennon (feito de café) -----------
+class Retrato {
+    private String tema;
+    private String material;
+    private String dimensoes;
+
+    public Retrato(String tema, String material, String dimensoes) {
+        this.tema = tema;
+        this.material = material;
+        this.dimensoes = dimensoes;
+    }
+
+    public void fotografar() {
+        System.out.println("Retrato de " + tema + " feito com " + material + " nas dimensões " + dimensoes + " foi fotografado.");
+    }
+}
+
+class GraoCafe {
+    private String origem;
+    private String torra;
+    private int quantidade;
+
+    public GraoCafe(String origem, String torra, int quantidade) {
+        this.origem = origem;
+        this.torra = torra;
+        this.quantidade = quantidade;
+    }
+
+    public void posicionar(int x, int y) {
+        System.out.println("Grão de café da origem " + origem + " e torra " + torra + " posicionado em " + x + "," + y + ");
+    }
+}
+
+class XicaraCafe {
+    private String cor;
+    private double capacidade;
+    private String conteudo;
+
+    public XicaraCafe(String cor, double capacidade, String conteudo) {
+        this.cor = cor;
+        this.capacidade = capacidade;
+        this.conteudo = conteudo;
+    }
+
+    public void colocarOlho(Retrato retrato, int X, int Y) {
+        System.out.println("Xícara " + cor + " com " + conteudo + " foi colocada como olho no retrato de " + retrato + " na posição " + X + "," + Y + ");
+    }
+}
+
+}
+
+
+Atividade 4 - Doodle -----------------------------------------------
+
+class Hamburguer {
+    private String tamanho;
+    private String ingredientes;
+    private int calorias;
+
+    public Hamburguer(String tamanho, String ingredientes, int calorias) {
+        this.tamanho = tamanho;
+        this.ingredientes = ingredientes;
+        this.calorias = calorias;
+    }
+
+    public void montar() {
+        System.out.println("Hamburguer tamanho " + tamanho + " com " + ingredientes + " montado.");
+    }
+
+    public void aquecer() {
+        System.out.println("Hamburguer aquecido.");
+    }
+
+    public void comer() {
+        System.out.println("Você está comendo um hamburguer de " + calorias + " calorias.");
+    }
+}
+
+class BatataFrita {
+    private int quantidade;
+    private double temperatura;
+    private boolean crocancia;
+
+    public BatataFrita(int quantidade, double temperatura, boolean crocancia) {
+        this.quantidade = quantidade;
+        this.temperatura = temperatura;
+        this.crocancia = crocancia;
+    }
+
+    public void fritar() {
+        System.out.println("Batatas fritando a " + temperatura + " graus.");
+    }
+
+    public void salgar() {
+        System.out.println("Batatas salgadas.");
+    }
+
+    public void servir() {
+        String status = crocancia ? "crocantes" : "murchas";
+        System.out.println("Servindo " + quantidade + " batatas " + status + ".");
+    }
+}
+
+class Refrigerante {
+    private String sabor;
+    private double volume;
+    private boolean gelo;
+
+    public Refrigerante(String sabor, double volume, boolean gelo) {
+        this.sabor = sabor;
+        this.volume = volume;
+        this.gelo = gelo;
+    }
+
+    public void gelar() {
+        System.out.println("O refrigerante sabor " + sabor + " está gelado.");
+    }
+
+    public void abrir() {
+        System.out.println("Abrindo lata/garrafa de refrigerante de " + volume + "ml.");
+    }
+
+    public void beber() {
+        String comGelo = gelo ? "com gelo" : "sem gelo";
+        System.out.println("Bebendo refrigerante " + sabor + " " + comGelo + ".");
+    }
+}     
+}
+
+
+Atividade 5 - Video -----------------------------------------------------------------------
+
+class Bulgogi {
+    private String corte;
+    private int tempoDeMarinada;
+    private double temperatura;
+
+    public Bulgogi(String corte, int tempoDeMarinada, double temperatura) {
+        this.corte = corte;
+        this.tempoDeMarinada = tempoDeMarinada;
+        this.temperatura = temperatura;
+    }
+
+    public void marinar() {
+        System.out.println("Marinando o bulgogi com corte " + corte + " por " + tempoDeMarinada + " horas.");
+    }
+
+    public void grelhar() {
+        System.out.println("Grelhando o bulgogi a " + temperatura + " graus.");
+    }
+
+    public void comer() {
+        System.out.println("Comendo o bulgogi suculento.");
+    }
+}
+
+class Japchae {
+    private String tipoMacarrao;
+    private String vegetais;
+    private String molho;
+
+    public Japchae(String tipoMacarrao, String vegetais, String molho) {
+        this.tipoMacarrao = tipoMacarrao;
+        this.vegetais = vegetais;
+        this.molho = molho;
+    }
+
+    public void fritar() {
+        System.out.println("Fritando o japchae com macarrão tipo " + tipoMacarrao + " e vegetais " + vegetais + ".");
+    }
+
+    public void salgar() {
+        System.out.println("Adicionando sal ao japchae.");
+    }
+
+    public void servir() {
+        System.out.println("Servindo japchae com molho de " + molho + ".");
+    }
+}
+
+class Kimchi {
+    private String tipo;
+    private int picancia;
+    private int fermentacao;
+
+    public Kimchi(String tipo, int picancia, int fermentacao) {
+        this.tipo = tipo;
+        this.picancia = picancia;
+        this.fermentacao = fermentacao;
+    }
+
+    public void fermentar() {
+        System.out.println("Fermentando o kimchi por " + fermentacao + " dias.");
+    }
+
+    public void temperar() {
+        System.out.println("Temperando o kimchi de tipo " + tipo + " com nível de picância " + picancia + ".");
+    }
+
+    public void provar() {
+        System.out.println("Provando o kimchi: sabor único e intenso!");
+    }
+}
+
+}
