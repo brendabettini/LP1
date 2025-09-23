@@ -1,8 +1,5 @@
 Atividade 1 - Média ------------------------------------------------
 
-
-![WhatsApp Image 2025-04-24 at 19 49 48 (1)](Atividade/midia/UML música - Atividade 2.png)
-
 public class Media {
 	
 	public static void main(String[] args)
@@ -43,9 +40,6 @@ public class Media {
 
 
 Atividade 2 - Música ---------------------------------------------------------------------------------------
-
-
-![WhatsApp Image 2025-04-24 at 19 49 48 (1)](https://github.com/brendabettini/LP1/blob/main/Atividade/midia/UML%20m%C3%BAsica%20-%20Atividade%202.png)
 
 class Porta {
     private String cor;
