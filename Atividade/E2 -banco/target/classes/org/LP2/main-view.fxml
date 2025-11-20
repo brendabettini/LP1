@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.LP2.MainController">
+
+    <top>
+        <Label text="CRUD SQLite - Porta / Olhos / Alma"
+               BorderPane.alignment="CENTER">
+            <padding>
+                <Insets top="10" bottom="10"/>
+            </padding>
+        </Label>
+    </top>
+
+    <center>
+        <TabPane prefWidth="800" prefHeight="400">
+            <tabs>
+
+                <Tab text="Porta">
+                    <content>
+                        <VBox spacing="10">
+                            <padding>
+                                <Insets top="10" right="10" bottom="10" left="10"/>
+                            </padding>
+
+                            <HBox spacing="10">
+                                <VBox spacing="5">
+                                    <Label text="Cor"/>
+                                    <TextField fx:id="portaCorField"/>
+
+                                    <Label text="Estado"/>
+                                    <TextField fx:id="portaEstadoField"/>
+
+                                    <Label text="Destino"/>
+                                    <TextField fx:id="portaDestinoField"/>
+                                </VBox>
+
+                                <TableView fx:id="portaTable" prefWidth="450">
+                                    <columns>
+                                        <TableColumn fx:id="portaIdCol" text="ID" prefWidth="60"/>
+                                        <TableColumn fx:id="portaCorCol" text="Cor" prefWidth="120"/>
+                                        <TableColumn fx:id="portaEstadoCol" text="Estado" prefWidth="120"/>
+                                        <TableColumn fx:id="portaDestinoCol" text="Destino" prefWidth="150"/>
+                                    </columns>
+                                </TableView>
+                            </HBox>
+
+                            <HBox spacing="10">
+                                <Button text="Novo"   onAction="#onNovaPorta"/>
+                                <Button text="Salvar" onAction="#onSalvarPorta"/>
+                                <Button text="Excluir" onAction="#onExcluirPorta"/>
+                            </HBox>
+                        </VBox>
+                    </content>
+                </Tab>
+
+                <Tab text="Olhos">
+                    <content>
+                        <VBox spacing="10">
+                            <padding>
+                                <Insets top="10" right="10" bottom="10" left="10"/>
+                            </padding>
+
+                            <HBox spacing="10">
+                                <VBox spacing="5">
+                                    <Label text="Cor"/>
+                                    <TextField fx:id="olhosCorField"/>
+
+                                    <Label text="Aberto?"/>
+                                    <CheckBox fx:id="olhosAbertoCheck"/>
+
+                                    <Label text="Nitidez (0-100)"/>
+                                    <TextField fx:id="olhosNitidezField"/>
+                                </VBox>
+
+                                <TableView fx:id="olhosTable" prefWidth="450">
+                                    <columns>
+                                        <TableColumn fx:id="olhosIdCol" text="ID" prefWidth="60"/>
+                                        <TableColumn fx:id="olhosCorCol" text="Cor" prefWidth="120"/>
+                                        <TableColumn fx:id="olhosAbertoCol" text="Aberto" prefWidth="80"/>
+                                        <TableColumn fx:id="olhosNitidezCol" text="Nitidez" prefWidth="120"/>
+                                    </columns>
+                                </TableView>
+                            </HBox>
+
+                            <HBox spacing="10">
+                                <Button text="Novo"   onAction="#onNovosOlhos"/>
+                                <Button text="Salvar" onAction="#onSalvarOlhos"/>
+                                <Button text="Excluir" onAction="#onExcluirOlhos"/>
+                            </HBox>
+                        </VBox>
+                    </content>
+                </Tab>
+
+                <Tab text="Alma">
+                    <content>
+                        <VBox spacing="10">
+                            <padding>
+                                <Insets top="10" right="10" bottom="10" left="10"/>
+                            </padding>
+
+                            <HBox spacing="10">
+                                <VBox spacing="5">
+                                    <Label text="Estado"/>
+                                    <TextField fx:id="almaEstadoField"/>
+
+                                    <Label text="Temperatura"/>
+                                    <TextField fx:id="almaTemperaturaField"/>
+
+                                    <Label text="Conexão"/>
+                                    <TextField fx:id="almaConexaoField"/>
+                                </VBox>
+
+                                <TableView fx:id="almaTable" prefWidth="450">
+                                    <columns>
+                                        <TableColumn fx:id="almaIdCol" text="ID" prefWidth="60"/>
+                                        <TableColumn fx:id="almaEstadoCol" text="Estado" prefWidth="120"/>
+                                        <TableColumn fx:id="almaTemperaturaCol" text="Temp." prefWidth="80"/>
+                                        <TableColumn fx:id="almaConexaoCol" text="Conexão" prefWidth="120"/>
+                                    </columns>
+                                </TableView>
+                            </HBox>
+
+                            <HBox spacing="10">
+                                <Button text="Limpar"   onAction="#onNovaAlma"/>
+                                <Button text="Salvar" onAction="#onSalvarAlma"/>
+                                <Button text="Excluir" onAction="#onExcluirAlma"/>
+                            </HBox>
+                        </VBox>
+                    </content>
+                </Tab>
+
+            </tabs>
+        </TabPane>
+    </center>
+
+</BorderPane>
